@@ -1,0 +1,359 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.section-wrapper {
+  padding: 60px 0;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.link-btn {
+  color: #fff;
+  background-color: #000;
+  width: 160px;
+  line-height: 36px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.gray-bg {
+  background-color: #f2f2f2;
+}
+
+.lines {
+  line-height: 2;
+}
+
+/*header*/
+.site-title {
+  width: 260px;
+  position: fixed;
+  top: 38px;
+  left: 4vw;
+  z-index: 1;
+}
+
+.site-title.black svg path {
+  fill: #333;
+  transition: fill 0.3s;
+}
+
+.header-nav {
+  font-weight: bold;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 36.1vw;
+  text-align: center;
+  padding: 120px 0 0;
+  background-color: rgba(34, 34, 34, 0.95);
+  z-index: 2;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-item {
+  margin-bottom: 30px;
+}
+
+.nav-item:first-of-type {
+  margin-bottom: 40px;
+}
+
+.nav-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.header-nav a {
+  color: #fff;
+}
+
+/*ハンバーガーボタン（メニューを開いていないとき)*/
+.burger-btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  right: 4vw;
+  z-index: 3;
+}
+
+.bar {
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 22px;
+  border-radius: 1px;
+}
+
+.bar_top {
+  transform: translateY(-4px);
+  transition: transform 0.3s;
+}
+
+.bar_bottom {
+  transform: translateY(4px);
+  transition: transform 0.3s;
+}
+
+.menu {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/*ハンバーガーボタン（メニュー開いたとき）*/
+.bar.cross.bar_top {
+  transform: translateY(2px) rotate(30deg);
+  transition: transform 0.3s;
+}
+
+.bar.cross.bar_mid {
+  opacity: 0;
+  transition: transform 0.3s;
+}
+
+.bar.cross.bar_bottom {
+  transform: translateY(-2px) rotate(-30deg);
+  transition: transform 0.3s;
+}
+
+/*ハンバーガーメニュー開いたとき*/
+body.noscroll {
+  overflow: hidden;
+}
+
+.header-nav.open {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.burger-musk {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.burger-btn.black .bar {
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+.burger-btn.black .menu {
+  color: #333;
+  transition: color 0.3s;
+}
+
+/*key visual*/
+.fv {
+  height: 100vh;
+}
+
+.fv::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.kv-wrapper {
+  height: 86.5%;
+  width: 76.4%;
+  background-image: url(../img/the-honest-company-uM-WXMr0YXc-unsplash.png);
+  background-size: cover;
+  background-position: center 0;
+  position: relative;
+}
+
+.copy-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: #fff;
+}
+
+.copy-jp {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.copy-company {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.main-copy {
+  font-size: 7.2rem;
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*about*/
+.section-wrapper {
+  padding: 120px;
+  position: relative;
+}
+
+.section-wrapper:first-of-type::after {
+  content: "";
+  width: 100vw;
+  height: 160px;
+  display: block;
+  background-color: #f2f2f2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.about-bg {
+  background-image: url(../img/skyline-4582510_1920.png);
+  background-size: cover;
+  background-position: center;
+  padding: 110px 0 110px 50px;
+}
+
+.about-content {
+  max-width: 590px;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/*works*/
+.l-section-wrapper {
+  padding: 60px 0;
+}
+
+.l-content-wrapper {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.s-section-wrapper {
+  width: 47.3%;
+}
+
+.section-img-wrapper {
+  margin-bottom: 30px;
+}
+
+/*topics*/
+.topics-list {
+  max-width: 700px;
+}
+
+.topics-item {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.topics-date {
+  color: #cecece;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.topics-title {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/*contact*/
+.contact-wrapper {
+  padding-bottom: 120px;
+}
+
+.contact-content {
+  width: 40%;
+}
+
+.contact-img-wrapper {
+  width: 52.7%;
+}
+
+/*footer*/
+.footer {
+  line-height: 50px;
+  background-color: #525252;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
